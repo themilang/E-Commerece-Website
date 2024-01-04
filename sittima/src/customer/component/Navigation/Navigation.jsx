@@ -277,8 +277,8 @@ export default function Navigation() {
       </Transition.Root>
 
       <header className="relative bg-black z-10">
-        <p className="flex h-10 items-center justify-center bg-[#121212]  px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over $100
+        <p  className="flex h-10 items-center justify-around text-xs bg-[#121212]  px-4  font-extralight text-white sm:px-6 lg:px-8 overflow-hidden">
+        Our Exchange Policy has been discontinued from 1st January 2024. 
         </p>
 
         <nav aria-label="Top" className=" bg-black mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
