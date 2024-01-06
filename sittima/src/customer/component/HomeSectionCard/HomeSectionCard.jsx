@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { useNavigate } from 'react-router-dom';
+
 
 const HomeSectionCard = ({ product }) => {
   const [ref, inView] = useInView();
+  const navigate = useNavigate(); // Move useNavigate inside the component
+
+  const handleCardClick = () => {
+    navigate('/product-details');
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div
+      onClick={handleCardClick} // Make the entire card clickable
       ref={ref}
-      className={`cursor-pointer rounded-lg flex flex-col items-center bg-[#202020] shadow-lg overflow-hidden w-[14rem] mx-3 transform transition-opacity ${
+      className={`sm:items-center cursor-pointer rounded-lg flex flex-col items-center bg-[#202020] shadow-lg overflow-hidden w-[14rem] mx-auto transform transition-opacity ${
         inView
           ? 'opacity-100 translate-y-0 duration-1000 ease-out'
           : 'opacity-0 translate-y-5 duration-1000 ease-in'
