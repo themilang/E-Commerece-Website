@@ -1,11 +1,11 @@
 import { useState } from "react";
 import SendIcon from "@mui/icons-material/Send";
-
 import { RadioGroup } from "@headlessui/react";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { Avatar, Grid } from "@mui/material";
 import { Button, Rating } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
+import { useNavigate } from "react-router-dom";
 const product = {
   name: "Apple MacBook Air 13-inch M1 256GB Gold",
   price: "Rs168,000.00",
@@ -81,6 +81,10 @@ function classNames(...classes) {
 export default function ProductDetails() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
+  const navigate=useNavigate();
+  const handleaddtocart=()=>{
+  navigate('/cart')
+ }
 
   return (
     <div className="bg-black ">
@@ -354,6 +358,7 @@ export default function ProductDetails() {
                     Buy Now
                   </Button>
                   <Button
+                 onClick={handleaddtocart}
                     variant="outlined"
                     color="success"
                     sx={{

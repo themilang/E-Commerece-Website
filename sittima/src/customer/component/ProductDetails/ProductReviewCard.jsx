@@ -1,7 +1,6 @@
 import React from "react";
 import { Avatar, Box, Rating } from "@mui/material";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import SendIcon from '@mui/icons-material/Send';
 import { Button } from "@mui/material";
 
 const data = [
