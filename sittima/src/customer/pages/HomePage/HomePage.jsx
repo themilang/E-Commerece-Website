@@ -54,7 +54,7 @@ const HomePage = () => {
                 alt="img"
               />
               <p className=" text-xs cursor-pointer text-white">
-                {categories[0].category1}
+                {categories[0].category2}
               </p>
             </div>
             <div className="flex  items-center gap-4 p-2 ">
