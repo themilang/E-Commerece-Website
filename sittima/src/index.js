@@ -7,7 +7,11 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+   <div className=' ml-16 mr-16'>
+
+   <App />
+    </div> 
+    
   </React.StrictMode>
 );
 
