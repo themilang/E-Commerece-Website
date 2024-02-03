@@ -1,6 +1,7 @@
 import User from "../models/user.model";
 import bycrypt from "bcrypt";
 import jwtProvider from '../config/jwtProvider'
+
 const createUser = async (userData) => {
   try {
     let { firstnName, lastName, email, password } = userData; //distucturing name email....
@@ -31,7 +32,7 @@ const findUserbyID = async (userID) => {
   }
 };
 
-const findUserbyemail = async (email) => {
+const getUserbyemail = async (email) => {
   try {
     const user = User.findone(email);
     if (!user) {
@@ -42,6 +43,8 @@ const findUserbyemail = async (email) => {
     throw new Error(error.message);
   }
 };
+
+
 
 const getUserByJWT = async (token) => {
   try {
@@ -73,4 +76,4 @@ try {
 
 }
 
-module.exports = { createUser, findUserbyID, findUserbyemail, getUserByJWT ,getallUser};
+module.exports = { createUser, findUserbyID, getUserbyemail, getUserByJWT ,getallUser};
