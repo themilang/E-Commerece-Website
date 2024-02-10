@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 
 
@@ -21,7 +21,10 @@ const cartItemsSchema=new mongoose.Schema({
     quantity:{
         type:Number,
         require:true,
-        default:1,
+        default:{
+            type:Number,
+            default:0,
+        }
     },
     price:{
         type:Number,

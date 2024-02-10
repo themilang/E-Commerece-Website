@@ -45,7 +45,7 @@ export default function CategoryAvatar() {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         
       >
-        <Avatar alt="" src={logo}  sx={{ width: 90, height: 90 }} />
+        <Avatar  className="ml-5"alt="" src={logo}  sx={{ width: 90, height: 90 }} />
       </StyledBadge>
     
     </Stack>

@@ -1,4 +1,4 @@
-import { Jwt } from "jsonwebtoken";
+const { Jwt } = require("jsonwebtoken");
 const skey=process.env.SECRETE_KEY;
 
 const generatejsonwebtoken=(userID)=>{

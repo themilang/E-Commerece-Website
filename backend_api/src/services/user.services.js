@@ -1,6 +1,7 @@
-import User from "../models/user.model";
-import bycrypt from "bcrypt";
-import jwtProvider from '../config/jwtProvider'
+const User = require("../models/user.model");
+const bcrypt = require("bcrypt");
+const jwtProvider = require('../config/jwtProvider');
+
 
 const createUser = async (userData) => {
   try {

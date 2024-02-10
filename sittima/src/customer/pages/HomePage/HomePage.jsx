@@ -123,9 +123,9 @@ const HomePage = () => {
           </div>
         </div>
 
-    <div className=" ml-32 mt-5 mr-32 rounded-3xl bg-[#373737] p-2">
-      <img className="  w-full h-32" src="
-https://laz-img-cdn.alicdn.com/imgextra/i3/O1CN01sNgWLl1ftMWren4Na_!!6000000004064-2-tps-1920-144.png"      alt="" />
+    <div className="mt-10 mb-10 bg-[#373737] rounded-3xl  ml-16 mr-16  ">
+      <img className=" rounded-3xl sm:w-full   " src="
+https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/b2ae62ab3a616371.jpg?q=20"      alt="" />
     </div>
 
 
@@ -134,47 +134,45 @@ https://laz-img-cdn.alicdn.com/imgextra/i3/O1CN01sNgWLl1ftMWren4Na_!!60000000040
 
 
 
-        <div className=" mt-10 mb-10  bg-[#373737] rounded-3xl p-6 ml-16 mr-16  ">
-          <div className=" flex gap-8 justify-center">
-            <div>
+    <div className="hidden sm:block mt-10 mb-10 bg-[#373737] p-6">
+  {/* Your content */}
+
+          <div className="text-white divide-x  divide-gray-600 flex gap-6   justify-center">
+          <div>
               <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
-            </div>{" "}
-            <div>
-              <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
-            </div>{" "}
-            <div>
-              <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
-            </div>{" "}
-            <div>
-              <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
+              <p className="ml-5">{avatarcategory[0].category1}</p>
             </div>
             <div>
               <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
+              <p className="ml-5">{avatarcategory[0].category1}</p>
             </div>
             <div>
               <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
+              <p className="ml-5">{avatarcategory[0].category1}</p>
             </div>
             <div>
               <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
+              <p className="ml-5">{avatarcategory[0].category1}</p>
             </div>
             <div>
               <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
+              <p className="ml-5">{avatarcategory[0].category1}</p>
             </div>
             <div>
               <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
-            </div>{" "}
+              <p className="ml-5">{avatarcategory[0].category1}</p>
+            </div>
             <div>
               <CategoryAvatar />
-              <p>{avatarcategory[0].category1}</p>
+              <p className="ml-5">{avatarcategory[0].category1}</p>
+            </div>
+            <div>
+              <CategoryAvatar />
+              <p className="ml-5">{avatarcategory[0].category1}</p>
+            </div>
+            <div>
+              <CategoryAvatar />
+              <p className="ml-5">{avatarcategory[0].category1}</p>
             </div>
           </div>
         </div>

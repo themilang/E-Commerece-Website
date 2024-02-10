@@ -1,4 +1,4 @@
-import Cart from '../models/cart.model'
+const Cart = require('../models/cart.model');
 
 const createCart= async()=>{
     try {
@@ -11,4 +11,4 @@ const createCart= async()=>{
         throw error;
     }
 } 
-export default createCart;
+module.exports={createCart}

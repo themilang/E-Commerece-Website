@@ -1,4 +1,4 @@
-import userService from '../services/user.services'
+ const userService=require('../services/user.services')
 
 const getUserProfile=async(req,res)=>{
     try {

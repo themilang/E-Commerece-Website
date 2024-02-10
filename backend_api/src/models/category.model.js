@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 
 
@@ -16,7 +16,10 @@ const categorySchema=new mongoose.Schema({
     totalPrice:{
         type:Number,
         require:true,
-        default:0,
+        default:{
+            type:Number,
+            default:0,
+        }
     },
     level:{
         type:Number,

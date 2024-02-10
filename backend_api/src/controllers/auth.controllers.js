@@ -1,8 +1,7 @@
-import userService from '../services/user.services'
-import jwtProvider from '../config/jwtProvider'
-import bcrypt from 'bcrypt';
-import cartService from '../services/cart.services';
-import createCart from '../services/cart.services';
+const userService = require('../services/user.services');
+const jwtProvider = require('../config/jwtProvider');
+const bcrypt = require('bcrypt');
+const cartService = require('../services/cart.services');
 
 
 const register = async (req,res)=>{
