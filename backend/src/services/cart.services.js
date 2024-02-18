@@ -1,6 +1,6 @@
 const Cart = require('../models/cart.model');
 
-const createCart= async()=>{
+async function createCart(user){
     try {
         const cart=new Cart({user});
         const createdCart=cart.save();
@@ -8,7 +8,7 @@ const createCart= async()=>{
         
     } catch (error) {
         console.error("Error while creating a cart",error.message)
-        throw error;
+        throw new Error(error.message);
     }
 } 
 module.exports={createCart}

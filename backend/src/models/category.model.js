@@ -2,15 +2,15 @@ const mongoose = require("mongoose");
 
 
 
-const cartSchema=new mongoose.Schema({
-    user:{
-        type:mongoose.Schema.Types.ObjectId,
+const categorySchema=new mongoose.Schema({
+    name:{
+        type:String,
         require:true,
-        ref:"user"
+        maxlength:50,
     },
-    cartItems:{
+    parentCategory:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"cart-items",
+        ref:"categories",
         require:true,
     },
     totalPrice:{
@@ -20,24 +20,16 @@ const cartSchema=new mongoose.Schema({
             type:Number,
             default:0,
         }
-        
     },
-    totalItems:{
+    level:{
         type:Number,
         require:true,
-        default:{
-            type:Number,
-            default:0,
-        }
     },
     discount:{
         type:Number,
         require:true,
-        default:{
-            type:Number,
-            default:0,
-        }
+        default:0,
     },
 })
-const Cart=mongoose.Schema("cart",cartSchema)
-module.exports=Cart;
+const Category=mongoose.Schema("categories",categorySchema)
+module.exports=Category;

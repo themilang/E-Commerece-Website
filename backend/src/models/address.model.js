@@ -24,7 +24,7 @@ const AddressSchema= new mongoose.Schema({
     },
     user:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:'user',
+        ref:'users',
     },
     mobile:{
         type:String,
@@ -32,4 +32,4 @@ const AddressSchema= new mongoose.Schema({
     },
 })
 const Address=mongoose.Schema("address",AddressSchema)
-module.exports=Address
+module.exports=Address;

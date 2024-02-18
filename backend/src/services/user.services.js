@@ -1,11 +1,11 @@
 const User = require("../models/user.model");
 const bcrypt = require("bcrypt");
-const jwtProvider = require('../config/jwtProvider');
+const jwtProvider = require("../config/jwtProvider");
 
 
 const createUser = async (userData) => {
   try {
-    let { firstnName, lastName, email, password } = userData; //distucturing name email....
+    let { firstName, lastName, email, password } = userData; //distucturing name email....
 
     const isUserExist = await User.findOne({ email });
 
@@ -13,9 +13,9 @@ const createUser = async (userData) => {
       throw new Error("User already exist with email:", email);
     }
 
-    password = await bycrypt.hash(password, 8);
+    password = await bcrypt.hash(password, 8);
 
-    const user = User.create({ firstnName, lastName, email, password });
+    const user = User.create({ firstName, lastName, email, password });
   } catch (error) {
     throw new Error(error.message);
   }

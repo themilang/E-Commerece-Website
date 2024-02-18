@@ -1,6 +1,7 @@
 const { Jwt } = require("jsonwebtoken");
 const skey=process.env.SECRETE_KEY;
 
+
 const generatejsonwebtoken=(userID)=>{
     const token= jwt.sign(
         {userID},
@@ -11,7 +12,7 @@ const generatejsonwebtoken=(userID)=>{
 
 }
 const getuserIdbyJWT=(token)=>{
-
+  
     const verifiytoken=jwt.verify(token,skey)
     return userID;
 }
